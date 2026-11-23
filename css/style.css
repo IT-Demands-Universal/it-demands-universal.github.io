@@ -8,12 +8,12 @@
   --blue:#6c9bf0; --green:#59c486; --yellow:#f0c640; --purple:#a98af0;}
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--font)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
-header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+header{display:flex;justify-content:space-between;align-items:center;gap:.5rem 1.25rem;padding:1rem 0;position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
 .brand{font-weight:800;font-size:1.2rem;text-decoration:none}
 nav a{margin-left:1.25rem;text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--ink)}
@@ -41,4 +41,16 @@ h2{font-size:1.9rem;line-height:1.15;margin:0 0 1.5rem;letter-spacing:-.01em}
 .note{color:var(--muted);max-width:40rem}
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
 .card .more{margin:.9rem 0 0;font-weight:600}
-@media (max-width:34rem){nav{display:none}.btn.alt{margin:.6rem 0 0}}
+nav a.back{color:var(--ink);font-weight:600;border:2px solid var(--ink);border-radius:.4rem;padding:.15rem .7rem}
+.callbar{display:none}
+@media (max-width:34rem){
+  header{position:static;flex-direction:column;align-items:flex-start}
+  html{scroll-padding-top:1rem}
+  nav{display:flex;flex-wrap:wrap;gap:.3rem 1rem}
+  nav a{margin-left:0}
+  .btn.alt{margin:.6rem 0 0}
+  body{padding-bottom:4.75rem}
+  .callbar{display:flex;gap:.5rem;position:fixed;left:0;right:0;bottom:0;z-index:10;padding:.6rem .75rem;background:var(--paper);border-top:1px solid var(--line)}
+  .callbar a{flex:1;text-align:center;padding:.75rem .5rem;border-radius:.4rem;font-weight:600;text-decoration:none;background:var(--ink);color:var(--paper)}
+  .callbar a+a{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+}
