@@ -1,6 +1,0 @@
-/* security.css: styles used only by the security page */
-
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem}
-.stat{border-top:8px solid var(--c);padding-top:.9rem}
-.stat b{display:block;font-size:clamp(2.2rem,5vw,3rem);line-height:1;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem}
-.stat span{color:var(--muted);display:block;max-width:18rem}
