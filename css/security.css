@@ -1,29 +1,6 @@
-/* security.css: loads after style.css and reuses its tokens and components */
-.hero .creds{margin-top:2rem}
-h3.sub{font-size:1.3rem;margin:2rem 0 1rem}
-h3.sub:first-of-type{margin-top:0}
-.note a{color:var(--blue)}
-.src{font-size:.95rem;margin-top:1.25rem}
+/* security.css: security page only. Shared pieces live in pages.css. */
 
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem}
 .stat{border-top:8px solid var(--c);padding-top:.9rem}
 .stat b{display:block;font-size:clamp(2.2rem,5vw,3rem);line-height:1;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem}
 .stat span{color:var(--muted);display:block;max-width:18rem}
-
-.check{background:var(--card);border:1px solid var(--line);border-radius:.4rem;padding:1.25rem;max-width:40rem}
-.check .panel{grid-template-columns:repeat(7,1fr);margin:.6rem 0 1.25rem}
-.q{display:flex;gap:.8rem;align-items:flex-start;padding:.75rem 0;border-top:1px solid var(--line);cursor:pointer}
-.q input{flex:none;width:1.2rem;height:1.2rem;margin-top:.25rem;accent-color:var(--blue)}
-#result{font-weight:800;font-size:1.15rem;margin:1rem 0 .25rem}
-#gaps{margin:0 0 1.25rem}
-
-.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.25rem}
-
-details{border-top:1px solid var(--line);padding:1rem 0}
-details:last-of-type{border-bottom:1px solid var(--line)}
-summary{font-weight:600;cursor:pointer}
-details p{color:var(--muted);max-width:40rem;margin:.6rem 0 0}
-
-@media (prefers-reduced-motion:no-preference){
-  .port{transition:opacity .2s}
-}
