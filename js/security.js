@@ -8,7 +8,7 @@
   var gapsEl = document.getElementById('gaps');
   var send = document.getElementById('send');
   var total = boxes.length;
-  var to = 'itdemandsuniversal@gmail.com';
+  var summary = '';
 
   function update() {
     var yes = 0;
@@ -32,12 +32,13 @@
 
     gapsEl.textContent = gaps.length && yes > 0 ? 'Start here: ' + gaps.slice(0, 3).join(' ') : '';
 
-    var body = 'Security check-up: ' + yes + ' of ' + total + '.\n\n' +
-      (gaps.length ? 'Gaps:\n- ' + gaps.join('\n- ') + '\n\n' : '') +
-      'This is for: (home or business)\nNumber of computers:\nBest way to reach me:';
-    send.href = 'mailto:' + to + '?subject=' + encodeURIComponent('Security quote request') +
-      '&body=' + encodeURIComponent(body);
+    summary = 'Security check-up: ' + yes + ' of ' + total + '.' + (gaps.length ? '\n\nGaps:\n- ' + gaps.join('\n- ') : '');
   }
+
+  send.addEventListener('click', function () {
+    var ta = document.querySelector('#request [name="message"]');
+    if (ta) ta.value = summary;
+  });
 
   boxes.forEach(function (box) { box.addEventListener('change', update); });
   update();

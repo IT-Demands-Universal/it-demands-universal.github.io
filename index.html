@@ -25,6 +25,7 @@
       <p class="lead">Router and Wi-Fi installs, speaker setup/installs, computer support, server support/setup, security setup/installs, web design, and much more for homes and small businesses in Central and North Central FL Area.</p>
       <a class="btn" href="#contact">Request a free quote</a>
       <a class="btn alt" href="#services">See services</a>
+      <p class="phoneline">Prefer to talk to a person? <a href="tel:+13526268805">Call or text 352-626-8805</a></p>
       <div class="panel" aria-hidden="true">
         <div class="port on" style="--c:var(--blue)"></div><div class="port"></div>
         <div class="port on" style="--c:var(--green)"></div><div class="port"></div>
@@ -37,14 +38,14 @@
       <h2>What I can help with</h2>
       <div class="grid">
         <div class="card" style="--c:var(--blue)">
-          <h3><a href="installs-repairs.html#installs">Installs</a></h3>
+          <h3><a href="installs.html">Installs</a></h3>
           <ul><li>Router and Wi-Fi setup</li><li>Ethernet cable runs (Once Licensed)</li><li>Speaker and audio installs</li><li>Custom PC Builds</li><li>POS devices</li></ul>
-          <p class="more"><a href="installs-repairs.html#installs">See installs and build a quote request</a></p>
+          <p class="more"><a href="installs.html">See installs and get a quote →</a></p>
         </div>
         <div class="card" style="--c:var(--green)">
-          <h3><a href="installs-repairs.html#repairs">Support and repair</a></h3>
+          <h3><a href="support.html">Support and repair</a></h3>
           <ul><li>Slow or broken computers</li><li>New device setup and data transfer</li><li>Printers, email and accounts</li></ul>
-          <p class="more"><a href="installs-repairs.html#repairs">Describe the problem and get a quote</a></p>
+          <p class="more"><a href="support.html">Get help with a tech problem →</a></p>
         </div>
         <div class="card" style="--c:var(--yellow)">
           <h3><a href="security.html">Security</a></h3>
@@ -54,6 +55,7 @@
         <div class="card" style="--c:var(--purple)">
           <h3>Cloud and AI tools</h3>
           <ul><li>Microsoft 365 and device setup</li><li>Shared files and email for your team</li><li>AI tools to save time on routine tasks</li></ul>
+          <p class="more"><a href="#contact">Ask about cloud and AI tools →</a></p>
         </div>
       </div>
     </section>
@@ -97,17 +99,29 @@
     </section>
 
     <section id="contact">
-      <h2>Request a quote</h2>
-      <p class="note">Tell me what you need and where you’re located. Photos of the space help for installs.</p>
-      <p><a class="btn" href="mailto:itdemandsuniversal@gmail.com?subject=Quote%20request">Email me</a>
-         <a class="btn alt" href="tel:+13526268805">Text or call [352-626-8805]</a></p>
+      <h2>Get in touch</h2>
+      <p class="note">Not sure what you need? That’s fine. Tell me what’s going on and I’ll point you in the right direction. Photos of the space or the problem help.</p>
+      <p class="reach"><a class="btn" href="tel:+13526268805">Call 352-626-8805</a><a class="btn alt" href="sms:+13526268805">Text me</a><a class="btn alt" href="mailto:itdemandsuniversal@gmail.com?subject=Quote%20request">Email me</a></p>
+      <form id="request" class="req" data-topic="Home">
+        <h3>Or ask for a call back</h3>
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Your town<input name="town" autocomplete="address-level2"></label>
+        <label>What do you need help with?<textarea name="message" rows="4"></textarea></label>
+        <label>Best time to call<select name="time"><option>Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Request a call back</button>
+        <p class="status" role="status" aria-live="polite"></p>
+        <p class="note">I only use this to contact you about your request.</p>
+      </form>
     </section>
   </main>
 
   <footer>© <span id="y"></span> IT Demands Universal. Serving Central and North Central FL Area. [Licensed and insured, once true.] Unfortunately, until licensed (coming soon!) I cannot cut into walls for cable runs for speakers and etc. I can however tackle most home setups without this license;
     reach out and find out if we are right for your project! </footer>
 </div>
-<div class="callbar"><a href="tel:+13526268805">Call or text</a><a href="mailto:itdemandsuniversal@gmail.com?subject=Quote%20request">Get a free quote</a></div>
+<div class="callbar"><a href="tel:+13526268805">Call or text</a><a href="#contact">Request a call back</a></div>
 <script src="js/main.js" defer></script>
+<script src="js/contact.js" defer></script>
 </body>
 </html>

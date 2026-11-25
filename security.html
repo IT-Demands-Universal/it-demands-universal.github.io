@@ -26,6 +26,7 @@
       <p class="lead">Most break-ins start with a stolen password, an out-of-date device or a convincing text message. I find those gaps and fix them in plain English, with a written price before any work starts.</p>
       <a class="btn" href="#contact">Get a free security quote</a>
       <a class="btn alt" href="#checkup">Take the 2-minute check</a>
+      <p class="phoneline">Prefer to talk to a person? <a href="tel:+13526268805">Call or text 352-626-8805</a></p>
       <ul class="creds">
         <li>CompTIA Security+</li>
         <li>Microsoft MD-102</li>
@@ -100,7 +101,7 @@
         <label class="q"><input type="checkbox" data-gap="Agree on a rule: verify unexpected calls, texts and payment requests a second way."><span>Everyone knows to double-check unexpected calls, texts and payment requests.</span></label>
         <p id="result" aria-live="polite">Tick the boxes that apply.</p>
         <p id="gaps" class="note"></p>
-        <a class="btn" id="send" href="mailto:itdemandsuniversal@gmail.com?subject=Security%20quote%20request">Email me about my results</a>
+        <a class="btn" id="send" href="#contact">Next: request a call back</a>
       </form>
     </section>
 
@@ -138,18 +139,38 @@
     </section>
 
     <section id="contact">
-      <h2>Get a free security quote</h2>
-      <p class="note">Tell me whether it’s a home or a business, how many computers, and what worries you most. I reply personally.</p>
-      <p><a class="btn" href="mailto:itdemandsuniversal@gmail.com?subject=Security%20quote%20request">Email me</a>
-         <a class="btn alt" href="tel:+13526268805">Text or call 352-626-8805</a></p>
-      <p class="note"><a href="index.html#services">← Back to all services</a></p>
+      <h2>Get in touch</h2>
+      <p class="note">Not sure what you need? That’s fine. Tell me what’s going on and I’ll point you in the right direction. Photos of the space or the problem help.</p>
+      <p class="reach"><a class="btn" href="tel:+13526268805">Call 352-626-8805</a><a class="btn alt" href="sms:+13526268805">Text me</a><a class="btn alt" href="mailto:itdemandsuniversal@gmail.com?subject=Security%20quote%20request">Email me</a></p>
+      <form id="request" class="req" data-topic="Security">
+        <h3>Or ask for a call back</h3>
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Your town<input name="town" autocomplete="address-level2"></label>
+        <label>What do you need help with?<textarea name="message" rows="4"></textarea></label>
+        <label>Best time to call<select name="time"><option>Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Request a call back</button>
+        <p class="status" role="status" aria-live="polite"></p>
+        <p class="note">I only use this to contact you about your request.</p>
+      </form>
+    </section>
+
+    <section id="more">
+      <h2>More ways I can help</h2>
+      <div class="grid">
+        <div class="card" style="--c:var(--blue)"><h3><a href="installs.html">Installs</a></h3><p>New router, speakers, a custom PC or POS devices, set up right.</p></div>
+        <div class="card" style="--c:var(--green)"><h3><a href="support.html">Support and repair</a></h3><p>Slow computers, printers, email and new device setup, explained in plain English.</p></div>
+      </div>
+      <p class="note"><a href="index.html">← Back to home</a></p>
     </section>
   </main>
 
   <footer>© <span id="y"></span> IT Demands Universal. Serving Central and North Central FL Area. No service can guarantee you will never be attacked; the goal is to close the common gaps and make recovery fast.</footer>
 </div>
-<div class="callbar"><a href="tel:+13526268805">Call or text</a><a href="mailto:itdemandsuniversal@gmail.com?subject=Security%20quote%20request">Get a free quote</a></div>
+<div class="callbar"><a href="tel:+13526268805">Call or text</a><a href="#contact">Request a call back</a></div>
 <script src="js/main.js" defer></script>
+<script src="js/contact.js" defer></script>
 <script src="js/security.js" defer></script>
 </body>
 </html>

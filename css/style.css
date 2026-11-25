@@ -9,7 +9,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--font)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.6 var(--font)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
@@ -83,3 +83,16 @@ details p{color:var(--muted);max-width:40rem;margin:.6rem 0 0}
 @media (prefers-reduced-motion:no-preference){
   .port{transition:opacity .2s}
 }
+
+/* Call-back form, contact buttons and small helpers used on every page */
+.phoneline{margin:1.25rem 0 0;font-weight:600}
+.card p{margin:0;color:var(--muted)}
+.reach{display:flex;flex-wrap:wrap;gap:.75rem;margin:0 0 1.75rem}
+.reach .btn.alt{margin:0}
+.req{display:grid;gap:1rem;max-width:34rem;background:var(--card);border:1px solid var(--line);border-radius:.4rem;padding:1.25rem}
+.req h3{margin:0}
+.req label{display:grid;gap:.35rem;font-weight:600}
+.req input,.req textarea{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:.4rem;padding:.8rem}
+.req button{font:inherit;font-weight:600;border:0;cursor:pointer;justify-self:start}
+.req .status{margin:0;font-weight:600}
+.hp{position:absolute;left:-9999px}
